@@ -1,0 +1,159 @@
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* Resume Container */
+
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 30px auto;
+    padding: 35px 45px;
+    background: white;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #222;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+}
+
+header h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+}
+
+/* Sections */
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Education and Experience */
+
+.item {
+    margin-bottom: 12px;
+}
+
+.item h3 {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.item p {
+    color: #444;
+}
+
+.item p span {
+    float: right;
+    font-weight: normal;
+}
+
+/* Skills */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skills span {
+    border: 1px solid #777;
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 3px;
+}
+
+/* Lists */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* Print Styling */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .resume {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 20px 30px;
+    }
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+}
+
+/* Mobile Responsive Design */
+
+@media screen and (max-width: 800px) {
+
+    .resume {
+        width: 95%;
+        margin: 15px auto;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .item p span {
+        float: none;
+        display: block;
+    }
+}
